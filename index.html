@@ -3,48 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gamers Network</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<title>Gamers Network | Lifesteal & BedWars</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Orbitron',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
+font-family:Segoe UI,sans-serif;
 }
 
 body{
-background:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920') center center/cover no-repeat fixed;
+background:url('https://images.unsplash.com/photo-1542751371-adc38448a05e') center center/cover no-repeat fixed;
 color:white;
 overflow-x:hidden;
 }
 
 .overlay{
-background:rgba(0,0,0,0.75);
+background:rgba(0,0,0,.75);
 min-height:100vh;
 }
 
 nav{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-padding:20px;
-gap:10px;
+position:sticky;
+top:0;
+backdrop-filter:blur(10px);
+background:rgba(0,0,0,.5);
+padding:15px;
+text-align:center;
+z-index:999;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-padding:12px 24px;
-background:rgba(255,255,255,0.1);
+padding:12px 20px;
+margin:5px;
 border-radius:10px;
-transition:0.3s;
+transition:.3s;
 }
 
 nav a:hover{
@@ -53,58 +49,57 @@ box-shadow:0 0 20px #00aaff;
 }
 
 .hero{
+padding:50px 20px;
 text-align:center;
-padding:120px 20px;
 }
 
-.hero h1{
-font-size:70px;
-text-shadow:0 0 20px #00aaff;
+.logo{
+width:280px;
+max-width:90%;
+animation:glow 2s infinite alternate;
 }
 
-.hero p{
-font-size:22px;
+@keyframes glow{
+from{filter:drop-shadow(0 0 10px #00aaff);}
+to{filter:drop-shadow(0 0 35px #00aaff);}
+}
+
+h1{
+font-size:60px;
+margin-top:20px;
+}
+
+.subtitle{
+font-size:24px;
 color:#ddd;
-margin-top:15px;
+margin-top:10px;
 }
 
-.btn{
+.status{
 display:inline-block;
-padding:15px 35px;
-margin-top:25px;
-background:#00aaff;
-color:white;
-text-decoration:none;
-border-radius:10px;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 25px #00aaff;
-}
-
-.section-title{
-text-align:center;
-font-size:40px;
-margin:50px 0 25px;
+margin-top:20px;
+padding:10px 20px;
+border-radius:50px;
+background:#00c853;
+font-weight:bold;
 }
 
 .cards{
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
+justify-content:center;
 gap:25px;
-padding:20px;
+padding:40px 20px;
 }
 
 .card{
-width:300px;
-background:rgba(255,255,255,0.08);
+width:320px;
+background:rgba(255,255,255,.08);
 backdrop-filter:blur(10px);
-padding:25px;
 border-radius:20px;
-transition:0.3s;
+padding:30px;
+text-align:center;
+transition:.4s;
 }
 
 .card:hover{
@@ -116,55 +111,45 @@ box-shadow:0 0 25px #00aaff;
 margin-bottom:15px;
 }
 
-.stats{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:20px;
+.buttons{
+text-align:center;
 padding:20px;
 }
 
-.stat{
-width:220px;
-text-align:center;
-background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:15px;
+.btn{
+display:inline-block;
+padding:15px 35px;
+margin:10px;
+background:#00aaff;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+transition:.3s;
 }
 
-.stat h2{
-font-size:40px;
-color:#00aaff;
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px #00aaff;
 }
 
 .countdown{
 text-align:center;
 font-size:28px;
-margin:40px 0;
+padding:20px;
 }
 
 footer{
 text-align:center;
 padding:30px;
-margin-top:40px;
-background:rgba(0,0,0,0.4);
+color:#ccc;
 }
 
 @media(max-width:768px){
-
-.hero h1{
-font-size:45px;
+h1{
+font-size:40px;
 }
-
-.hero p{
-font-size:18px;
-}
-
 .card{
-width:90%;
-}
-
-.stat{
 width:90%;
 }
 }
@@ -176,227 +161,84 @@ width:90%;
 <div class="overlay">
 
 <nav>
-<a href="#">Home</a>
-<a href="rules.html">Rules</a>
-<a href="staff.html">Staff</a>
-<a href="store.html">Store</a>
-<a href="about.html">About</a>
+<a href="index.html">🏠 Home</a>
+<a href="rules.html">📜 Rules</a>
+<a href="staff.html">👑 Staff</a>
+<a href="store.html">🛒 Store</a>
+<a href="about.html">ℹ️ About</a>
 </nav>
 
 <section class="hero">
-<h1>GAMERS NETWORK</h1>
-<p>Play • Compete • Conquer</p>
 
-<a href="https://discord.com/invite/kEysV2Urww" target="_blank" class="btn">
-Join Discord
-</a>
-</section>
+<img src="logo.png" class="logo">
 
-<div
-🚀 Opening Soon...
+<h1>Gamers Network</h1>
+
+<p class="subtitle">
+🔥 Lifesteal SMP • ⚔️ BedWars • 🎁 Events
+</p>
+
+<div class="status">
+🚀 Opening Soon
 </div>
 
-<h2 class="section-title">Game Modes</h2>
+</section>
 
-<div class="cards">
+<div class="countdown">
+⏳ Server Launch Coming Soon
+</div>
+
+<section class="cards">
 
 <div class="card">
 <h2>🔥 Lifesteal SMP</h2>
-<p>Fight players, steal hearts and dominate the server.</p>
+<p>
+Fight players, steal hearts, build alliances and dominate the server.
+</p>
 </div>
 
 <div class="card">
 <h2>⚔️ BedWars</h2>
-<p>Protect your bed and destroy enemy teams.</p>
+<p>
+Protect your bed, rush opponents and become the champion.
+</p>
 </div>
 
 <div class="card">
-<h2>🎁 Events</h2>
-<p>Special events with rewards and giveaways.</p>
-</div>
-
-</div>
-
-<h2 class="section-title">Why Choose Us?</h2>
-
-<div class="cards">
-
-<div class="card">
-<h2>🛡️ Anti-Cheat</h2>
-<p>Fair gameplay and active moderation.</p>
+<h2>🎁 Events & Giveaways</h2>
+<p>
+Weekly events, rewards, crates and special challenges.
+</p>
 </div>
 
 <div class="card">
-<h2>💰 Economy</h2>
-<p>Trade, earn money and build your empire.</p>
+<h2>📊 Server Status</h2>
+<p>
+🟢 Coming Soon
+</p>
 </div>
 
-<div class="card">
-<h2>🌎 Friendly Community</h2>
-<p>Meet players and enjoy a welcoming server.</p>
-</div>
+</section>
 
-</div>
+<div class="buttons">
 
-<h2 class="section-title">Server Stats</h2>
+<a href="#" class="btn">🎮 Play Soon</a>
 
-<div class="stats">
-
-<div class="stat">
-<h2>24/7</h2>
-<p>Online</p>
-</div>
-
-<div class="stat">
-<h2>100+</h2>
-<p>Expected Players</p>
-</div>
-
-<div class="stat">
-<h2>3+</h2>
-<p>Game Modes</p>
-</div>
-
-</div>
-
-<h2 class="section-title">Latest News</h2>
-
-<div class="cards">
-
-<div class="card">
-<h2>🚀 Grand Opening</h2>
-<p>Gamers Network is launching soon.</p>
-</div>
-
-<div class="card">
-<h2>🎁 Founder Rewards</h2>
-<p>Join Discord early for exclusive rewards.</p>
-</div>
-
-</div>
-
-<!-- COMMUNITY SECTION -->
-
-<h2 class="section-title">Join Our Community</h2>
-
-<div class="cards">
-
-<div class="card">
-<h2>📺 YouTube</h2>
-<p>Watch updates, trailers and gameplay videos.</p>
-<br>
 <a href="https://www.youtube.com/@KRISHgamer_op" target="_blank" class="btn">
-Subscribe
+📺 YouTube
 </a>
-</div>
 
-<div class="card">
-<h2>💬 Discord</h2>
-<p>Chat with players and receive server announcements.</p>
-<br>
 <a href="https://discord.com/invite/kEysV2Urww" target="_blank" class="btn">
-Join Discord
-</a>
-</div>
-
-<div class="card">
-<h2>🌐 Server IP</h2>
-<p id="serverip">play.gamersnetwork.net</p>
-<br>
-<button onclick="copyIP()" class="btn">
-Copy IP
-</button>
-</div>
-
-</div>
-
-<!-- YOUTUBE VIDEO SECTION -->
-
-<h2 class="section-title">Official Trailer</h2>
-
-<div style="display:flex;justify-content:center;padding:20px;">
-<iframe
-width="900"
-height="500"
-src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-title="Gamers Network Trailer"
-frameborder="0"
-allowfullscreen>
-</iframe>
-</div>
-
-<!-- OWNER SECTION -->
-
-<h2 class="section-title">Server Owner</h2>
-
-<div class="cards">
-
-<div class="card">
-<h2>👑 KRISH GAMER</h2>
-<p>Founder & Owner of Gamers Network</p>
-
-<br>
-
-<a href="https://www.youtube.com/@KRISHgamer_op"
-target="_blank"
-class="btn">
-YouTube Channel
+💬 Discord
 </a>
 
 </div>
-
-</div>
-
-<!-- FAQ SECTION -->
-
-<h2 class="section-title">FAQ</h2>
-
-<div class="cards">
-
-<div class="card">
-<h2>❓ When will the server open?</h2>
-<p>Check the countdown timer on the homepage.</p>
-</div>
-
-<div class="card">
-<h2>❓ Is the server free?</h2>
-<p>Yes, everyone can join for free.</p>
-</div>
-
-<div class="card">
-<h2>❓ How can I get updates?</h2>
-<p>Join our Discord server.</p>
-</div>
-
-</div>
-
-<script>
-function copyIP(){
-navigator.clipboard.writeText("play.gamersnetwork.net");
-alert("Server IP copied!");
-}
-</script>
 
 <footer>
-© 2026 Gamers Network • All Rights Reserved
+© 2026 Gamers Network • Play • Compete • Conquer
 </footer>
 
 </div>
-
-<script>
-const launchDate = new Date("December 1, 2026 18:00:00").getTime();
-
-setInterval(() => {
-const now = new Date().getTime();
-const distance = launchDate - now;
-
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-document.getElementById("countdown").innerHTML =
-"🚀 Launch In: " + days + " Days " + hours + " Hours";
-}, 1000);
-</script>
 
 </body>
 </html>
